@@ -35,8 +35,8 @@ PRESETS = {
 }
 PRESET_HELP = {
     "Voreinstellung (δ = 0,90, σ = 0,10)": "Ruhiger Markt, geduldige Anbieter: Absprache mit langer Strafphase ist ein Gleichgewicht, und Preiskriege treten regelmäßig auf, ohne dass jemand abweicht.",
-    "Kurze Strafphase (T = 3)": "Drei Perioden Krieg schrecken nicht genug ab: bei dieser Menge gibt es keine tragbare Absprache.",
+    "Kurze Strafphase (T = 3)": "Drei Perioden Krieg schrecken nicht genug ab: bei dieser Menge gibt es keine haltbare Absprache.",
     "Engere Absprache (Menge 4,8)": "Näher an der Monopolmenge: das Gleichgewicht braucht häufigere Kriege (rund 80 % der Zeit) und bringt wenig mehr.",
-    "Sehr geduldig (δ = 0,97)": "Mit sehr geduldigen Anbietern trägt eine engere Absprache bei kleinerer Auslösewahrscheinlichkeit.",
-    "Sehr verrauschter Markt (σ = 0,50)": "Bei viel Rauschen kann der Preis Abweichen nicht mehr vom Zufall unterscheiden: keine Absprache ist tragbar.",
+    "Sehr geduldig (δ = 0,97)": "Mit sehr geduldigen Anbietern hält eine engere Absprache bei kleinerer Auslösewahrscheinlichkeit.",
+    "Sehr verrauschter Markt (σ = 0,50)": "Bei viel Rauschen kann der Preis Abweichen nicht mehr vom Zufall unterscheiden: keine Absprache ist haltbar.",
 }

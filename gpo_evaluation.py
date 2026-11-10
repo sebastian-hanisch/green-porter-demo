@@ -82,7 +82,7 @@ def table_matrix() -> dict:
 def verdict(an: Analysis, settings: Settings) -> tuple[str, str]:
     """(Stufe, Satz) für die Kernfrage: gibt es Preiskriege, obwohl keiner abweicht?"""
     if an.best is None:
-        return "warning", (f"Bei Menge {fmt(settings.qc)} und Strafdauer {settings.t} gibt es **keine tragbare Absprache**: kein Auslöse-Niveau macht die abgesprochene Menge zur "
+        return "warning", (f"Bei Menge {fmt(settings.qc)} und Strafdauer {settings.t} gibt es **keine haltbare Absprache**: kein Auslöse-Niveau macht die abgesprochene Menge zur "
                            "besten Antwort. Übrig bleibt Cournot (Gewinn 9,00 je Firma).")
     b = an.best
     return "info", (f"Die Absprache ist ein Gleichgewicht. Der Trigger-Preis liegt bei {fmt(b['trigger_price'])}; er löst auch ohne jedes Abweichen mit Wahrscheinlichkeit "

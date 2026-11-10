@@ -4,7 +4,7 @@
 
 Siebtes Stück der **Wiederholte-Spiele-Linie** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“.
 Nachfolger von [rauschen-kooperation-demo](https://sebastianhanisch-rauschen-kooperation-demo.streamlit.app/) (Fehler bei der Ausführung) und
-[folk-theorem-demo](https://sebastianhanisch-folk-theorem-demo.streamlit.app/) (was Wiederholung tragen kann). Die Kante ist ein `fix`: dort wurde jede Aktion beobachtet,
+[folk-theorem-demo](https://sebastianhanisch-folk-theorem-demo.streamlit.app/) (was Wiederholung leisten kann). Die Kante ist ein `fix`: dort wurde jede Aktion beobachtet,
 hier **nur der verrauschte Marktpreis**, nicht die Menge des anderen.
 
 Vehikel: zwei Spediteure wählen jede Woche ihre Kapazität auf einer Relation (Cournot-Duopol, lineare Nachfrage 10 − Q, Kosten 1 je Einheit, multiplikativer lognormaler Preisschock).
@@ -37,8 +37,8 @@ A = 10, c = 1: Cournot 9,00 je Firma, Monopol 10,125.
 | Gibt es Preiskriege auf dem Gleichgewichtspfad? | Ja: bei δ = 0,90, σ = 0,10, Qc = 5,3, T = 30 löst der Trigger mit α = 4,9 % je Absprache-Periode aus, ohne dass jemand abweicht; im Mittel 59 % der Zeit Krieg. | `test_default_equilibria`, `test_simulated_war_share_converges_to_the_formula` |
 | Wie viele Gleichgewichte? | Typisch **zwei**: ein ruhiges (α = 4,9 %, Wert 9,57 je Periode) und ein kriegerisches (α = 53 %, Wert 9,14, 94 % Krieg). | `test_default_equilibria` |
 | Was bringt die Absprache? | Etwa die Hälfte (50 %) des Abstands zwischen Cournot und Monopol: 9,57 diskontiert je Periode, langfristig im Mittel 9,33 (die Kriege kosten). | `test_default_analysis` |
-| Enger absprechen? | Bei Menge 4,8 statt 5,3: α = 13,7 %, 80 % der Zeit Krieg, Wert 9,50; bringt kaum mehr. Mit sehr geduldigen Anbietern (δ = 0,97) trägt Menge 5,0 bei α = 2,4 % (42 % Krieg, Wert 9,68). | `test_tighter_collusion_needs_more_wars`, `test_very_patient_firms_sustain_a_tighter_collusion_with_fewer_triggers` |
-| Wann trägt nichts? | Bei kurzer Strafe (T = 3), geringer Geduld (δ = 0,70) oder starkem Rauschen (σ = 0,50) gibt es bei Qc = 5,3 keine tragbare Absprache; im besten Fall der Tabelle liegt der Wert bei 9,07 bis 9,90. | `test_no_equilibrium_presets`, `test_collusion_disappears_with_noise_and_impatience_in_the_table` |
+| Enger absprechen? | Bei Menge 4,8 statt 5,3: α = 13,7 %, 80 % der Zeit Krieg, Wert 9,50; bringt kaum mehr. Mit sehr geduldigen Anbietern (δ = 0,97) hält Menge 5,0 bei α = 2,4 % (42 % Krieg, Wert 9,68). | `test_tighter_collusion_needs_more_wars`, `test_very_patient_firms_sustain_a_tighter_collusion_with_fewer_triggers` |
+| Wann hält nichts? | Bei kurzer Strafe (T = 3), geringer Geduld (δ = 0,70) oder starkem Rauschen (σ = 0,50) gibt es bei Qc = 5,3 keine haltbare Absprache; im besten Fall der Tabelle liegt der Wert bei 9,07 bis 9,90. | `test_no_equilibrium_presets`, `test_collusion_disappears_with_noise_and_impatience_in_the_table` |
 | Zu träger oder zu empfindlicher Trigger? | Zu träge (α = 0,4 α*): es lohnt, mehr zu fahren. Zu empfindlich (α = 2,5 α*): es lohnt, weniger zu fahren, um nicht auszulösen. Nur die FOC-Nullstellen machen die abgesprochene Menge zur besten Antwort. | `test_a_too_sluggish_trigger_invites_overproduction_and_a_too_sensitive_one_invites_underproduction` |
 
 ### Befunde gegenüber dem Plan
@@ -51,10 +51,10 @@ die Preiskriege ganz vermeiden würde (Trigger am Rand der Verteilung), weshalb 
 ## Ehrliche Grenzen
 
 - **Zwei Anbieter, lineare Nachfrage, gleiche Kosten:** mit anderen Strukturen ändern sich die Zahlen, nicht die Logik.
-- **Einfache Trigger-Preis-Form:** die optimalen symmetrischen Gleichgewichte (Abreu/Pearce/Stacchetti 1986) haben eine andere, einfachere Struktur mit zwei Mengen und können mehr tragen.
+- **Einfache Trigger-Preis-Form:** die optimalen symmetrischen Gleichgewichte (Abreu/Pearce/Stacchetti 1986) haben eine andere, einfachere Struktur mit zwei Mengen und können mehr leisten.
 - **Preisschock unabhängig und lognormal:** korrelierte Schocks verändern die Kriegshäufigkeit.
 - **Gleichgewicht, keine Vorhersage:** immer Cournot ist ebenfalls eines.
-- **Kein Rechtsurteil:** das Modell zeigt eine selbsttragende Absprache ohne Kommunikation, keine kartellrechtliche Einordnung.
+- **Kein Rechtsurteil:** das Modell zeigt eine selbstdurchsetzende Absprache ohne Kommunikation, keine kartellrechtliche Einordnung.
 
 ## Verifikation
 

@@ -58,7 +58,7 @@ bestraft werden kann, obwohl man es nicht sieht.
 
 Weiter unten: **❓ Kernfrage**, drei Experimente (**🔬**), **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**. Vorgänger sind
 [rauschen-kooperation-demo](https://sebastianhanisch-rauschen-kooperation-demo.streamlit.app/) (Fehler bei der Ausführung) und
-[folk-theorem-demo](https://sebastianhanisch-folk-theorem-demo.streamlit.app/) (was Wiederholung tragen kann).
+[folk-theorem-demo](https://sebastianhanisch-folk-theorem-demo.streamlit.app/) (was Wiederholung leisten kann).
 """
 )
 
@@ -80,7 +80,7 @@ with st.expander("Die zwei Phasen: wer macht was?", expanded=True):
         "| Phase | Menge je Anbieter | Gesamtmenge | erwarteter Gewinn je Anbieter | Übergang |\n|---|---|---|---|---|\n"
         f"| **Absprache** | Qc/2 (Regler) | Qc | (10 − Qc − 1) · Qc/2 | Preis unter Trigger: Krieg beginnt |\n"
         f"| **Preiskrieg** | 3,0 (Cournot) | 6,0 | {fmt(PI_COURNOT)} | nach T Perioden zurück zur Absprache |\n"
-        f"| **zum Vergleich: Monopol** | 2,25 | 4,5 | {fmt(PI_MONOPOLY)} | nicht als Gleichgewicht tragbar (Abweichen lohnt) |"
+        f"| **zum Vergleich: Monopol** | 2,25 | 4,5 | {fmt(PI_MONOPOLY)} | nicht als Gleichgewicht haltbar (Abweichen lohnt) |"
     )
     st.caption("Alle Gewinne sind Erwartungswerte; der Preis schwankt mit lognormalem Schock der Streuung σ (Regler).")
 
@@ -172,12 +172,12 @@ st.markdown("---")
 
 # --- Experiment 3 --------------------------------------------------------------------------------------------------------------------------
 
-st.subheader("🔬 Experiment: Wie viel Absprache trägt der Markt?")
+st.subheader("🔬 Experiment: Wie viel Absprache hält der Markt aus?")
 st.caption("Bestes Gleichgewicht je Geduld δ (Zeilen) und Schwankung σ (Spalten): höchster Wert je Periode über alle abgesprochenen Mengen (4,5 bis 5,9) und Kriegsdauern "
            "(1 bis 40). Vorgerechnet (tools/precompute.py).")
 mat = _table()
 st.plotly_chart(build_table(mat), width="stretch", key="table_chart")
-st.info("Mit größerer Preisschwankung oder geringerer Geduld bricht die Absprache zusammen: ab σ = 0,30 gibt es bei den gezeigten Werten keine tragbare Absprache mehr, "
+st.info("Mit größerer Preisschwankung oder geringerer Geduld bricht die Absprache zusammen: ab σ = 0,30 gibt es bei den gezeigten Werten keine haltbare Absprache mehr, "
         "und selbst im besten Fall liegt der Gewinn nur wenig über Cournot (9,00) und deutlich unter dem Monopol (10,125).")
 
 st.markdown("---")
@@ -191,7 +191,7 @@ st.markdown(
 |---|---|---|
 | **Genau zwei Anbieter, lineare Nachfrage, gleiche Kosten** | Mit mehr Anbietern oder anderer Nachfrage ändern sich Mengen und Schwellen; die Logik des Trigger-Preises bleibt. | - |
 | **Nur Preise beobachtbar** | Sähe jeder die Menge des anderen, gäbe es keine Preiskriege im Gleichgewicht (volle Beobachtbarkeit). | `folk-theorem-demo` (perfekte Beobachtung) |
-| **Strafe: Rückfall auf Cournot** | Härtere Strafen (Überproduktion) oder andere Strategien können mehr Absprache tragen; hier ist es die einfachste. | - |
+| **Strafe: Rückfall auf Cournot** | Härtere Strafen (Überproduktion) oder andere Strategien können mehr Absprache aufrechterhalten; hier ist es die einfachste. | - |
 | **Schock unabhängig über die Zeit, lognormal** | Korrelierte Nachfrageschocks (Konjunktur) verändern die Kriegshäufigkeit; ein nach oben begrenzter Schock ließe Preiskriege ganz vermeiden. | - |
 | **Beide Anbieter folgen dem Trigger-Preis-Plan** | Es ist ein Gleichgewicht, keine Vorhersage: zwei Gleichgewichte mit Absprache und immer Cournot existieren. | - |
 | **Ist das Kartellrecht berührt?** | Eine solche Absprache ohne Kommunikation ist hier ein Modell, keine rechtliche Einordnung. | - |

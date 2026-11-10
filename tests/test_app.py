@@ -75,4 +75,4 @@ def test_a_setting_without_an_equilibrium_warns_instead_of_raising():
     at.query_params["t"] = "3"
     at.run(timeout=TIMEOUT)
     assert not at.exception, [str(e) for e in at.exception]
-    assert any("kein Gleichgewicht" in w.value or "keine tragbare" in w.value for w in at.warning)
+    assert any("kein Gleichgewicht" in w.value or "keine haltbare" in w.value for w in at.warning)

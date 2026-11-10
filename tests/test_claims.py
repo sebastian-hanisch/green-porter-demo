@@ -50,7 +50,7 @@ def test_no_equilibrium_presets():
         an = E.analyse(E.Settings(p["delta"], p["sigma"], p["qc"], p["t"]))
         assert an.best is None and an.sim is None
         level, text = E.verdict(an, E.Settings(p["delta"], p["sigma"], p["qc"], p["t"]))
-        assert level == "warning" and "keine tragbare Absprache" in text
+        assert level == "warning" and "keine haltbare Absprache" in text
 
 
 def test_table_cells_by_recomputation():
